@@ -22,6 +22,7 @@
     },
     "dependencies": {
         "element-plus": "^2.9.7",
+        "swiper": "^8.4.7",
         "tailwindcss-intersect": "^2.2.0",
         "tailwindcss-motion": "^1.1.0"
     }

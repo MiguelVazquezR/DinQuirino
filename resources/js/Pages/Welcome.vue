@@ -76,16 +76,48 @@
         </section>
         <section class="mt-32" id="galery">
             <h1 class="text-center text-3xl">GALERÍA</h1>
+            <div class="bg-[#E8DFD8] py-8 mt-3">
+                <CollageCarousel :images="images" />
+            </div>
         </section>
     </LandingLayout>
 </template>
 <script>
+import CollageCarousel from '@/Components/MyComponents/CollageCarousel.vue';
 import LandingLayout from '@/Layouts/LandingLayout.vue';
+import galery1 from '@/../../public/images/quirino1.png';
+import galery2 from '@/../../public/images/quirino1.png';
+import galery3 from '@/../../public/images/quirino1.png';
 
 export default {
     name: "Welcome",
+    data() {
+        return {
+            images: [
+                { src: galery1, size: 'small' },
+                { src: galery2, size: 'small' },
+                { src: galery3, size: 'small' },
+                { src: galery1, size: 'small' },
+                { src: galery2, size: 'medium' },
+                { src: galery3, size: 'large' },
+                { src: galery1, size: 'small' },
+                { src: galery2, size: 'medium' },
+                { src: galery3, size: 'large' },
+                { src: galery1, size: 'small' },
+                { src: galery2, size: 'medium' },
+                { src: galery3, size: 'large' },
+                { src: galery1, size: 'small' },
+                { src: galery2, size: 'medium' },
+                { src: galery3, size: 'large' },
+                { src: galery1, size: 'small' },
+                { src: galery2, size: 'medium' },
+                { src: galery3, size: 'large' },
+            ]
+        }
+    },
     components: {
         LandingLayout,
+        CollageCarousel,
     },
     methods: {
 
