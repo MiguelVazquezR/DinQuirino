@@ -131,7 +131,7 @@
                 <div
                     class="bg-[#8B5E3C] shadow-lg rounded-l-2xl h-72 w-1/2 absolute top-2 right-0 motion-translate-x-in-[90%] motion-translate-y-in-[0%] motion-duration-[4.00s]/translate">
                 </div>
-                <img src="@/../../public/images/slide1.png" alt="Don Quirino sentado en una silla"
+                <img src="@/../../public/images/slide4.png" alt="Don Quirino sentado en una silla"
                     class="select-none w-[30%] absolute top-10 left-[40%] z-10 motion-preset-expand motion-duration-2000"
                     :draggable="false">
                 <div
