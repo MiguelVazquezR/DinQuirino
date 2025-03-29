@@ -1,10 +1,20 @@
 <template>
     <swiper :modules="modules" :slides-per-view="'auto'" :space-between="20" :free-mode="true" :mousewheel="false"
         :grab-cursor="true" class="collage-swiper">
-        <swiper-slide v-for="(image, index) in images" :key="index" :class="['collage-slide', `size-${image.size}`]">
-            <img :src="image.src" :alt="`Image ${index + 1}`" class="selected-none" :draggable="false" />
+        <swiper-slide @click="openPreview(index)" v-for="(image, index) in images" :key="index" :style="{ width: image.w}"
+            class="bg-[#8B5E3C44] flex justify-center rounded-2xl collage-slide transition-transform duration-300">
+            <img :src="image.src" :alt="`Image ${index + 1}`" class="selected-none h-80 object-contain"
+                :draggable="false" />
         </swiper-slide>
     </swiper>
+    <DialogModal :show="showImageModal" @close="showImageModal = false" maxWidth="6xl">
+        <template #content>
+            <img :src="images[selectedImage].src" class="w-full h-auto object-contain" />
+        </template>
+        <template #footer>
+            <button class="bg-gray-400 text-white px-4 py-2 rounded" @click="showImageModal = false">Cerrar</button>
+        </template>
+    </DialogModal>
 </template>
 
 <script>
@@ -12,20 +22,33 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import { FreeMode, Mousewheel } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/free-mode';
+import DialogModal from '../DialogModal.vue';
 
 export default {
+    name: 'CollageCarousel',
+    data() {
+        return {
+            showImageModal: false,
+            selectedImage: null
+        };
+    },
     components: {
         Swiper,
-        SwiperSlide
+        SwiperSlide,
+        DialogModal,
     },
-
     props: {
         images: {
             type: Array,
             required: true
         }
     },
-
+    methods: {
+        openPreview(index) {
+            this.selectedImage = index;
+            this.showImageModal = true;
+        }
+    },
     setup() {
         return {
             modules: [FreeMode, Mousewheel]
@@ -40,35 +63,7 @@ export default {
     padding: 5px;
 }
 
-.collage-slide {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
 .collage-slide:hover {
-    transform: scale(1.03);
-}
-
-.collage-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.size-small {
-    width: 150px;
-    height: 150px;
-}
-
-.size-medium {
-    width: 200px;
-    height: 250px;
-}
-
-.size-large {
-    width: 300px;
-    height: 200px;
+    transform: scale(1.04);
 }
 </style>
