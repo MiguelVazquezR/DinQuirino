@@ -1,13 +1,13 @@
 <template>
     <LandingLayout title="Bienvenidos" class="overflow-x-hidden">
         <section>
-            <figure class="w-[98%] mx-auto absolute top-3 left-4 -z-10">
-                <img src="@/../../public/images/hero.png" :draggable="false" class="w-full select-none"
+            <figure class="w-[98%] mx-auto absolute top-4 left-1 -z-10">
+                <img src="@/../../public/images/hero_mobile.png" :draggable="false" class="w-full select-none"
                     alt="Campo de maiz con tierra y cielo azul">
             </figure>
         </section>
-        <section class="mt-[96vh] pt-10" id="history">
-            <h1 class="text-center text-3xl">HISTORIA</h1>
+        <section class="mt-[38vh] pt-10" id="history">
+            <h1 class="text-center text-2xl">HISTORIA</h1>
             <div class="flex justify-center items-center gap-8 my-2">
                 <button @click="prevSlide" :disabled="currentSlide == 1"
                     class="bg-[#d9d9d9] rounded-full size-9 flex items-center justify-center hover:bg-gray-300 disabled:opacity-50 disabled:hover:bg-gray-200 transition-colors duration-300">
@@ -193,7 +193,7 @@
                 <img src="@/../../public/images/song.png" :draggable="false" class="w-full select-none"
                     alt="Recuadro con titulo de canción y logo de youtube">
             </button>
-            <h1 class="text-center text-3xl mt-10">GALERÍA</h1>
+            <h1 class="text-center text-2xl mt-10">GALERÍA</h1>
             <div class="bg-[#E8DFD8] py-8 mt-3">
                 <CollageCarousel :images="images" />
             </div>
@@ -204,7 +204,7 @@
                 <button class="absolute top-3 right-4 text-gray-300 hover:text-red-500"
                     @click="showVideo = false">✕</button>
                 <h2 class="text-xl font-bold mb-4">Corrido de Quirino Navarro</h2>
-                <iframe width="1000" height="590" src="https://www.youtube.com/embed/ctRXYsFM4Fc?si=czYKj-Hf9K2jMDHZ"
+                <iframe width="350" height="300" src="https://www.youtube.com/embed/ctRXYsFM4Fc?si=czYKj-Hf9K2jMDHZ"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

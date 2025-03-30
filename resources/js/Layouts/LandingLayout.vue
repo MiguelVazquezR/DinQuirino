@@ -1,8 +1,8 @@
 <template>
     <div>
         <Head :title="title" />
-        <nav class="flex items-center justify-between px-12 my-6">
-            <ApplicationLogo class="h-14" />
+        <nav class="flex items-center justify-between px-6 lg:px-12 my-6">
+            <ApplicationLogo class="h-8 lg:h-14" />
             <section class="mr-10">
                 <ul class="hidden lg:flex items-center space-x-14 text-xl text-white">
                     <li>
