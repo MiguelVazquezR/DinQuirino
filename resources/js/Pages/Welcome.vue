@@ -8,17 +8,36 @@
         </section>
         <section class="mt-[96vh] pt-10" id="history">
             <h1 class="text-center text-3xl">HISTORIA</h1>
-            <div class="flex justify-center gap-4 my-4">
+            <div class="flex justify-center items-center gap-8 my-2">
                 <button @click="prevSlide" :disabled="currentSlide == 1"
-                    class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50">
-                    Anterior
+                    class="bg-[#d9d9d9] rounded-full size-9 flex items-center justify-center hover:bg-gray-300 disabled:opacity-50 disabled:hover:bg-gray-200 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061a1.125 1.125 0 0 1 1.683.977v8.122Z" />
+                    </svg>
                 </button>
-                <button @click="stopAudio" class="px-4 py-2 bg-red-200 rounded hover:bg-red-300">
-                    Detener
+                <button v-if="isPlaying" @click="stopAudio" class="bg-[#FF6060] rounded-full size-12 flex items-center justify-center hover:bg-red-300 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
+                    </svg>
+                </button>
+                <button v-else @click="playAudio" class="bg-[#B6FD80] rounded-full size-12 flex items-center justify-center hover:bg-[#62E100] transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                    </svg>
                 </button>
                 <button @click="nextSlide" :disabled="currentSlide == 4"
-                    class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 disabled:opacity-50">
-                    Siguiente
+                    class="bg-[#d9d9d9] rounded-full size-9 flex items-center justify-center hover:bg-gray-300 disabled:opacity-50 disabled:hover:bg-gray-200 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z" />
+                    </svg>
                 </button>
             </div>
             <article v-if="currentSlide == 1" class="mt-5 relative">
@@ -160,11 +179,27 @@
             <audio ref="audioPlayer" @ended="handleAudioEnd"></audio>
         </section>
         <section class="mt-32" id="galery">
+            <button @click="showVideo = true" href="https://google.com" class="block w-1/4 ml-auto mr-10">
+                <img src="@/../../public/images/song.png" :draggable="false" class="w-full select-none"
+                    alt="Recuadro con titulo de canción y logo de youtube">
+            </button>
             <h1 class="text-center text-3xl">GALERÍA</h1>
             <div class="bg-[#E8DFD8] py-8 mt-3">
                 <CollageCarousel :images="images" />
             </div>
         </section>
+        <!-- Modal para reproducir el video -->
+        <div v-if="showVideo" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 p-4 z-20">
+            <div class="bg-[#232323] rounded-lg p-6 w-full max-w-[66rem] relative text-white z-50">
+                <button class="absolute top-3 right-4 text-gray-300 hover:text-red-500"
+                    @click="showVideo = false">✕</button>
+                <h2 class="text-xl font-bold mb-4">Corrido de Quirino Navarro</h2>
+                <iframe width="1000" height="590" src="https://www.youtube.com/embed/ctRXYsFM4Fc?si=czYKj-Hf9K2jMDHZ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
     </LandingLayout>
 </template>
 <script>
@@ -178,6 +213,7 @@ import galery5 from '@/../../public/images/galery/g5.png';
 import galery6 from '@/../../public/images/galery/g6.png';
 import galery7 from '@/../../public/images/galery/g7.png';
 import galery8 from '@/../../public/images/galery/g8.png';
+import galery9 from '@/../../public/images/galery/g9.png';
 import slide1 from '@/../../public/audios/slide1.mp3';
 import slide2 from '@/../../public/audios/slide2.mp3';
 import slide3 from '@/../../public/audios/slide3.mp3';
@@ -188,8 +224,11 @@ export default {
     data() {
         return {
             currentSlide: 1,
+            showVideo: false,
+            isPlaying: false,
             images: [
                 { src: galery1, w: '210px' },
+                { src: galery9, w: '200px' },
                 { src: galery2, w: '210px' },
                 { src: galery3, w: '430px' },
                 { src: galery4, w: '600px' },
@@ -209,10 +248,6 @@ export default {
     components: {
         LandingLayout,
         CollageCarousel,
-    },
-    mounted() {
-        // Reproducir el audio del primer slide al cargar la página
-        this.playAudio();
     },
     methods: {
         prevSlide() {
@@ -235,6 +270,7 @@ export default {
                     audioElement.pause();
                     audioElement.src = this.audios[this.currentSlide - 1];
                     audioElement.play().catch(e => console.error("Error al reproducir:", e));
+                    this.isPlaying = true;
                 }
             });
         },
