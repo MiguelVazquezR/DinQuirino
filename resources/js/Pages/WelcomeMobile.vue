@@ -2,7 +2,7 @@
     <LandingLayout title="Bienvenidos" class="overflow-x-hidden">
         <section>
             <figure class="w-[98%] mx-auto absolute top-4 left-1 -z-10">
-                <img src="@/../../public/images/hero_mobile.png" :draggable="false" class="w-full select-none"
+                <img src="@/../../public/images/hero_mobile.webp" :draggable="false" class="w-full select-none"
                     alt="Campo de maiz con tierra y cielo azul">
             </figure>
         </section>
@@ -54,7 +54,7 @@
                             Jalisco.
                         </p>
                     </div>
-                    <img src="@/../../public/images/history_content_mobile.png" alt="Contenedor de historia"
+                    <img src="@/../../public/images/history_content_mobile.webp" alt="Contenedor de historia"
                         class="select-none w-full" :draggable="false">
                 </figure>
                 <div class="mt-4 relative">
@@ -64,7 +64,7 @@
                     <div
                         class="bg-[#8B5E3C] shadow-lg rounded-l-2xl h-44 w-1/2 absolute top-2 right-0 motion-translate-x-in-[90%] motion-translate-y-in-[0%] motion-duration-[4.00s]/translate">
                     </div>
-                    <img src="@/../../public/images/slide1.png" alt="Don Quirino sentado en una silla"
+                    <img src="@/../../public/images/slide1.webp" alt="Don Quirino sentado en una silla"
                         class="select-none w-[70%] absolute top-12 left-[13%] z-10 motion-preset-expand motion-duration-2000"
                         :draggable="false">
                     <div
@@ -90,7 +90,7 @@
                             Su valentía en batalla lo convirtió en una figura clave en la Revolución
                         </p>
                     </div>
-                    <img src="@/../../public/images/history_content_mobile.png" alt="Contenedor de historia"
+                    <img src="@/../../public/images/history_content_mobile.webp" alt="Contenedor de historia"
                         class="select-none w-full" :draggable="false">
                 </figure>
                 <div class="mt-4 relative">
@@ -100,7 +100,7 @@
                     <div
                         class="bg-[#8B5E3C] shadow-lg rounded-l-2xl h-44 w-1/2 absolute top-2 right-0 motion-translate-x-in-[90%] motion-translate-y-in-[0%] motion-duration-[4.00s]/translate">
                     </div>
-                    <img src="@/../../public/images/slide2.png" alt="Don Quirino sentado en una silla"
+                    <img src="@/../../public/images/slide2.webp" alt="Don Quirino sentado en una silla"
                         class="select-none w-[70%] absolute top-12 left-[13%] z-10 motion-preset-expand motion-duration-2000"
                         :draggable="false">
                     <div
@@ -130,7 +130,7 @@
                             En un golpe de astucia, logró escapar a caballo, dejando a sus verdugos burlados.
                         </p>
                     </div>
-                    <img src="@/../../public/images/history_content_mobile.png" alt="Contenedor de historia"
+                    <img src="@/../../public/images/history_content_mobile.webp" alt="Contenedor de historia"
                         class="select-none w-full" :draggable="false">
                 </figure>
                 <div class="mt-4 relative">
@@ -140,7 +140,7 @@
                     <div
                         class="bg-[#8B5E3C] shadow-lg rounded-l-2xl h-44 w-1/2 absolute top-2 right-0 motion-translate-x-in-[90%] motion-translate-y-in-[0%] motion-duration-[4.00s]/translate">
                     </div>
-                    <img src="@/../../public/images/slide3.png" alt="Don Quirino sentado en una silla"
+                    <img src="@/../../public/images/slide3.webp" alt="Don Quirino sentado en una silla"
                         class="select-none w-[70%] absolute top-12 left-[13%] z-10 motion-preset-expand motion-duration-2000"
                         :draggable="false">
                     <div
@@ -164,7 +164,7 @@
                             simbolo de honor y resistencia.
                         </p>
                     </div>
-                    <img src="@/../../public/images/history_content_mobile.png" alt="Contenedor de historia"
+                    <img src="@/../../public/images/history_content_mobile.webp" alt="Contenedor de historia"
                         class="select-none w-full" :draggable="false">
                 </figure>
                 <div class="mt-4 relative">
@@ -174,7 +174,7 @@
                     <div
                         class="bg-[#8B5E3C] shadow-lg rounded-l-2xl h-44 w-1/2 absolute top-2 right-0 motion-translate-x-in-[90%] motion-translate-y-in-[0%] motion-duration-[4.00s]/translate">
                     </div>
-                    <img src="@/../../public/images/slide4.png" alt="Don Quirino sentado en una silla"
+                    <img src="@/../../public/images/slide4.webp" alt="Don Quirino sentado en una silla"
                         class="select-none w-[70%] absolute top-12 left-[13%] z-10 motion-preset-expand motion-duration-2000"
                         :draggable="false">
                     <div
@@ -190,7 +190,7 @@
         </section>
         <section class="mt-[70vh]" id="galery">
             <button @click="showVideo = true" href="https://google.com" class="block w-[96%] mx-auto">
-                <img src="@/../../public/images/song.png" :draggable="false" class="w-full select-none"
+                <img src="@/../../public/images/song.webp" :draggable="false" class="w-full select-none"
                     alt="Recuadro con titulo de canción y logo de youtube">
             </button>
             <h1 class="text-center text-2xl mt-10">GALERÍA</h1>
@@ -215,15 +215,15 @@
 <script>
 import CollageCarousel from '@/Components/MyComponents/CollageCarousel.vue';
 import LandingLayout from '@/Layouts/LandingLayout.vue';
-import galery1 from '@/../../public/images/galery/g1.png';
-import galery2 from '@/../../public/images/galery/g2.png';
-import galery3 from '@/../../public/images/galery/g3.png';
-import galery4 from '@/../../public/images/galery/g4.png';
-import galery5 from '@/../../public/images/galery/g5.png';
-import galery6 from '@/../../public/images/galery/g6.png';
-import galery7 from '@/../../public/images/galery/g7.png';
-import galery8 from '@/../../public/images/galery/g8.png';
-import galery9 from '@/../../public/images/galery/g9.png';
+import galery1 from '@/../../public/images/galery/g1.webp';
+import galery2 from '@/../../public/images/galery/g2.webp';
+import galery3 from '@/../../public/images/galery/g3.webp';
+import galery4 from '@/../../public/images/galery/g4.webp';
+import galery5 from '@/../../public/images/galery/g5.webp';
+import galery6 from '@/../../public/images/galery/g6.webp';
+import galery7 from '@/../../public/images/galery/g7.webp';
+import galery8 from '@/../../public/images/galery/g8.webp';
+import galery9 from '@/../../public/images/galery/g9.webp';
 import slide1 from '@/../../public/audios/slide1.mp3';
 import slide2 from '@/../../public/audios/slide2.mp3';
 import slide3 from '@/../../public/audios/slide3.mp3';
