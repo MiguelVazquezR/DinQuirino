@@ -19,8 +19,9 @@
         </main>
         <footer class="mt-10 bg-gradient-to-r from-[#8B5E3C] to-[#3B2311] text-white py-2 lg:py-4 px-4 lg:px-8">
             <div class="hidden lg:flex">
-                <section class="items-center justify-between">
+                <section class="w-full flex items-center justify-between">
                     <ApplicationLogo color="white" class="h-14" />
+                    <p class="text-center">Copyright &copy; {{ currentYear }}. Todos los derechos reservados.</p>
                     <div>
                         <span>Hecho por </span>
                         <a href="https://dtw.com.mx" target="_blank" class="inline-block">
@@ -28,7 +29,6 @@
                         </a>
                     </div>
                 </section>
-                <p class="text-center">Copyright &copy; {{ currentYear }}. Todos los derechos reservados.</p>
             </div>
             <div class="lg:hidden">
                 <section>
