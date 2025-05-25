@@ -17,14 +17,14 @@
                             d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061a1.125 1.125 0 0 1 1.683.977v8.122Z" />
                     </svg>
                 </button>
-                <button v-if="isPlaying" @click="stopAudio" class="bg-[#FF6060] rounded-full size-12 flex items-center justify-center hover:bg-red-300 transition-colors duration-300">
+                <button v-if="isPlaying" @click="stopAudio" class="bg-[#9F6300] text-white rounded-full size-12 flex items-center justify-center hover:bg-[#715220] transition-colors duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
                     </svg>
                 </button>
-                <button v-else @click="playAudio" class="bg-[#B6FD80] rounded-full size-12 flex items-center justify-center hover:bg-[#62E100] transition-colors duration-300">
+                <button v-else @click="playAudio" class="bg-[#46620F] text-white rounded-full size-12 flex items-center justify-center hover:bg-[#2e5919] transition-colors duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -59,7 +59,7 @@
                 <figure
                     class="w-[30%] relative motion-scale-in-[0.45] motion-translate-x-in-[-25%] motion-translate-y-in-[73%] motion-opacity-in-[0%] motion-rotate-in-[-15deg] motion-blur-in-[5px] motion-duration-[1.0s] motion-duration-[1.0s]/scale motion-duration-[1.0s]/translate motion-duration-[1.63s]/rotate">
                     <div class="absolute top-0 left-0 font-bold py-8 px-14 w-full">
-                        <h2 class="text-2xl text-center">Don Quirino: El hombre que liberó a Tepatitlán</h2>
+                        <h2 class="text-2xl text-center">Don Quirino: El hombre que defendió a Tepatitlán</h2>
                         <p class="mt-6 text-xl font-thin">
                             En una época de lucha y revolución, Don Quirino, un hombre de principios y valentía, marcó
                             la historia de Tepatitlán. <br><br>
@@ -205,10 +205,8 @@
 <script>
 import CollageCarousel from '@/Components/MyComponents/CollageCarousel.vue';
 import LandingLayout from '@/Layouts/LandingLayout.vue';
-import galery1 from '@/../../public/images/galery/g1.png';
 import galery2 from '@/../../public/images/galery/g2.png';
 import galery3 from '@/../../public/images/galery/g3.png';
-import galery4 from '@/../../public/images/galery/g4.png';
 import galery5 from '@/../../public/images/galery/g5.png';
 import galery6 from '@/../../public/images/galery/g6.png';
 import galery7 from '@/../../public/images/galery/g7.png';
@@ -227,11 +225,9 @@ export default {
             showVideo: false,
             isPlaying: false,
             images: [
-                { src: galery1, w: '210px' },
                 { src: galery9, w: '200px' },
                 { src: galery2, w: '210px' },
                 { src: galery3, w: '430px' },
-                { src: galery4, w: '600px' },
                 { src: galery5, w: '230px' },
                 { src: galery6, w: '600px' },
                 { src: galery7, w: '350px' },

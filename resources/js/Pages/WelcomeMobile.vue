@@ -6,7 +6,7 @@
                     alt="Campo de maiz con tierra y cielo azul">
             </figure>
         </section>
-        <section class="mt-[38vh] pt-10" id="history">
+        <section class="mt-[35vh] pt-10" id="history">
             <h1 class="text-center text-2xl">HISTORIA</h1>
             <div class="flex justify-center items-center gap-8 my-2">
                 <button @click="prevSlide" :disabled="currentSlide == 1"
@@ -18,7 +18,7 @@
                     </svg>
                 </button>
                 <button v-if="isPlaying" @click="stopAudio"
-                    class="bg-[#FF6060] rounded-full size-12 flex items-center justify-center hover:bg-red-300 transition-colors duration-300">
+                    class="bg-[#9F6300] text-white rounded-full size-12 flex items-center justify-center hover:bg-[#715220] transition-colors duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -26,7 +26,7 @@
                     </svg>
                 </button>
                 <button v-else @click="playAudio"
-                    class="bg-[#B6FD80] rounded-full size-12 flex items-center justify-center hover:bg-[#62E100] transition-colors duration-300">
+                    class="bg-[#46620F] text-white rounded-full size-12 flex items-center justify-center hover:bg-[#2e5919] transition-colors duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -46,7 +46,7 @@
                 <figure
                     class="w-[96%] mx-auto relative motion-scale-in-[0.45] motion-translate-x-in-[-25%] motion-translate-y-in-[73%] motion-opacity-in-[0%] motion-rotate-in-[-15deg] motion-blur-in-[5px] motion-duration-[1.0s] motion-duration-[1.0s]/scale motion-duration-[1.0s]/translate motion-duration-[1.63s]/rotate">
                     <div class="absolute top-0 left-0 font-bold py-2 px-4 w-full">
-                        <h2 class="text-center">Don Quirino: El hombre que liberó a Tepatitlán</h2>
+                        <h2 class="text-center">Don Quirino: El hombre que defendió a Tepatitlán</h2>
                         <p class="mt-2 text-sm font-thin">
                             En una época de lucha y revolución, Don Quirino, un hombre de principios y valentía, marcó
                             la historia de Tepatitlán. <br><br>
@@ -188,7 +188,7 @@
             <!-- Reproductor de audio (oculto) -->
             <audio ref="audioPlayer" @ended="handleAudioEnd"></audio>
         </section>
-        <section class="mt-[70vh]" id="galery">
+        <section class="mt-[67vh]" id="galery">
             <button @click="showVideo = true" href="https://google.com" class="block w-[96%] mx-auto">
                 <img src="@/../../public/images/song.png" :draggable="false" class="w-full select-none"
                     alt="Recuadro con titulo de canción y logo de youtube">
@@ -215,10 +215,8 @@
 <script>
 import CollageCarousel from '@/Components/MyComponents/CollageCarousel.vue';
 import LandingLayout from '@/Layouts/LandingLayout.vue';
-import galery1 from '@/../../public/images/galery/g1.png';
 import galery2 from '@/../../public/images/galery/g2.png';
 import galery3 from '@/../../public/images/galery/g3.png';
-import galery4 from '@/../../public/images/galery/g4.png';
 import galery5 from '@/../../public/images/galery/g5.png';
 import galery6 from '@/../../public/images/galery/g6.png';
 import galery7 from '@/../../public/images/galery/g7.png';
@@ -237,11 +235,9 @@ export default {
             showVideo: false,
             isPlaying: false,
             images: [
-                { src: galery1, w: '210px' },
                 { src: galery9, w: '200px' },
                 { src: galery2, w: '210px' },
                 { src: galery3, w: '430px' },
-                { src: galery4, w: '600px' },
                 { src: galery5, w: '230px' },
                 { src: galery6, w: '600px' },
                 { src: galery7, w: '350px' },
